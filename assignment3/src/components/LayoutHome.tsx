@@ -13,7 +13,7 @@ const LayoutHome: React.FC = () => {
     <>
       <nav>
         <ul>
-          <li>
+          <li className="lo">
             <Link to="/home">
               <img className="logo" src={logo} alt="Image" />
             </Link>
