@@ -10,7 +10,7 @@ const HomePage = () => {
       {sortedData.map((item) => (
         <div key={item.title}>
           <h2 className="text-2xl my-9 text-center font-bold">{item.title}</h2>
-          <p className="text-center text-base mb-9">{item.sub_title}</p>
+          <p className="text-center font-semibold text-base mb-9">{item.sub_title}</p>
           {item.type_new.map((type) => (
             <div key={type.name}>
               <h3 className="ml-24 font-bold text-lg">

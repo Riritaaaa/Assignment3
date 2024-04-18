@@ -14,7 +14,7 @@ const LayoutHome: React.FC = () => {
       <nav>
         <ul>
           <li className="lo">
-            <Link to="/home">
+            <Link to="/">
               <img className="logo" src={logo} alt="Image" />
             </Link>
           </li>
