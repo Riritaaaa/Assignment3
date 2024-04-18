@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from "@assets/react.svg";
+import "@pages/App.css"
 
 const LayoutHome: React.FC = () => {
   const [clickedLink, setClickedLink] = useState("");
@@ -10,12 +11,12 @@ const LayoutHome: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="containerr">
       <nav>
-        <ul>
+        <ul className="home">
           <li className="lo">
             <Link to="/">
-              <img className="logo" src={logo} alt="Image" />
+              <img className="logo w-9" src={logo} alt="Image" />
             </Link>
           </li>
           <li>
@@ -93,7 +94,7 @@ const LayoutHome: React.FC = () => {
         </ul>
       </nav>
       <Outlet />
-    </>
+    </div>
   );
 };
 

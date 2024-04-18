@@ -1,6 +1,7 @@
 import { data_new } from "@components/data_new";
 import { useParams, useSearchParams } from "react-router-dom";
 import NotFound from "@pages/NotFound";
+import "@pages/App.css"
 const DetailNew = () => {
   const { typeName, id } = useParams();
   const news = data_new

@@ -5,8 +5,12 @@ import DetailNew from "@pages/DetailNew";
 import MainPage from "@pages/MainPage";
 import NotFound from "@pages/NotFound";
 import LayoutHome from "@components/LayoutHome";
+import Modulecss from "@styleui/modulecss";
+import Workshop from "@styleui/workshop";
+import VisaPage1 from "@styleui/visapage1";
+import VisaPage2 from "@styleui/visapage2";
 
-import "./App.css";
+/* import "./App.css"; */
 
 function App() {
   return (
@@ -14,7 +18,10 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage/>} />
         <Route path="*" element={<NotFound />} />
-    
+        <Route path="/css" element={<Modulecss/>} />
+        <Route path="/workshop" element={<Workshop/>} />
+        <Route path="/visa1" element={<VisaPage1/>} />
+        <Route path="/visa2" element={<VisaPage2/>} />
         <Route path="/home" element={<LayoutHome/>} >
           <Route index element={<HomePage/>} />
           <Route path="allnew" element={<AllNew/>} />

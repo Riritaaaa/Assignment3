@@ -27,6 +27,7 @@
         "@pages/*": ["pages/*"],
         "@components/*": ["components/*"],
         "@assets/*": ["assets/*"],
+        "@styleui/*": ["styleui/*"],
       },
   },
   "include": ["src"],

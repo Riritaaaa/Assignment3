@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containervisa{
+    font-family: "Prompt", sans-serif;
+    margin: auto;
+    padding: 10px;
+    width: 390px;
+    height: 100%;
+    background: #ebebeb;
+}
+
+.rowcon:first-of-type{
+    font-size: 22px;
+    padding: 0 20px 0px 0px;
+}
+
+.rowcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(64, 72, 84);
+    font-size: 20px;
+    padding: 10px 20px 0px 0px;
+}
+
+.h1{
+    font-size: 20px;
+    color: rgb(64, 72, 84);
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+
+.h2{
+    font-size: 12px;
+    color: rgb(133, 133, 133);
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.card{
+    width: 340px;
+    height: 180px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cardleft,  .cardright{
+    padding: 0px; 
+    margin-left: -30px;
+    margin-right: 12px; 
+    background-color: rgb(201, 224, 231); 
+    height: 160px; 
+    width: 13px; 
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+.cardright{
+    margin-left: 12px; 
+    margin-right: -30px;
+}
+
+.cardinner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.front{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #445667, #163b60);
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #dddddd ;
+}
+
+.avail{
+    color: rgb(88, 197, 88);
+    font-size: 10px;
+    text-align: right;
+    padding-right: 25px;
+}
+
+.row, .row2, .row0{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+    padding: 15px 20px 5px 20px;
+}
+
+.dollar{
+    background-color: black;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.row2{
+    font-size: 10px;
+    padding: 10px 20px ;
+}
+
+.row0{
+    font-size: 22px;
+    padding: 0 20px 5px 20px;
+}
+
+.dot{
+    width: 25px;
+    align-items: center;
+    margin: 5px auto;
+    display: block;
+}
+
+.box1 p{
+    background-color: none;
+    border: 2px solid rgb(182, 181, 181);
+    color: rgb(64, 72, 84);
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 10px;
+    border-radius: 50px;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+    height: 80px;
+    padding: 10px 35px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: white;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 1px 3px 5px #dddddd ;
+}
+
+.boxlist,
+.boxlist1{
+    width: 340px;
+    height: 60px;
+    padding: 10px 35px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: white;
+    border-radius: 5px;
+    align-items: center;
+    margin: 15px auto;
+    box-shadow: 3px 3px 5px #dddddd ;
+}
+
+.boxlist .rowlist{
+    color: rgb(64, 72, 84);
+    font-size: 13px;
+    padding: 0px 5px 0px 0px;
+}
+
+.boxlist1{
+    padding: 10px 15px;
+    display: flex;
+}
+
+span{
+    font-weight: 600;
+}
+
+.rowlist{
+    margin-left: 20px;
+}
+
+.date{
+    font-size: 12px;
+    font-weight: normal;
+    color: rgb(167, 167, 167);
+}
+
+ .containervisa2{
+    margin: auto;
+    padding: 15px 20px;
+    width: 390px;
+    height: 100%;
+    background: linear-gradient(
+        to top, 
+        #ffffff 0%, 
+        #ffffff 65%, 
+        #445667 65%, 
+        #163b60 100%
+      );
+}
+
+.rowconvisa2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    padding: 10px 5px 0px 0px;
+}
+
+.avail2{
+    color: rgb(88, 197, 88);
+    font-size: 10px;
+}
+
+.box{
+    width: 340px;
+    height: 80px;
+    border:none;
+    background-color: #3c5670;
+    border-radius: 5px;
+    align-items: center;
+    margin: 15px auto;
+    box-shadow: 2px 2px 3px #405468;
+}

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { data_new } from "@components/data_new";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { NewsType, TypeNew } from "@components/data_type";
-
+import "@pages/App.css"
 const AllNew = () => {
   const { typeName } = useParams<{ typeName: string }>();
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { data_new } from "@components/data_new";
-
+import "@pages/App.css"
 const HomePage = () => {
   const sortedData = data_new.sort((a, b) => a.title.localeCompare(b.title));
 
