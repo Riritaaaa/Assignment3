@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(247, 247, 247);
+}
+
+.container{
+  padding-top: 80px;
+  text-align: center;
+}
+
+img{
+  text-align: center;
+  margin: auto;
+}
+
+.main{
+  width: 300px;
+  margin-bottom: 10px;
+  height: 350px;
+}
+
+.not{
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+}
+
+.logo {
+  height: 28px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+button{
+  color: white;
+  background-color: #7b8c86;
+  border-radius: 10px;
+  padding: 8px 20px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin: 25px auto;
+  border: 3px solid #7b8c86;
+}
+
+button:hover{
+  transition: 0.3s;
+  background-color: white;
+  color: #7b8c86;
+  border: 3px solid #7b8c86;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #7b8c86;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 30px;
+  margin: 12px 10px;
+  border-radius: 20PX;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.box{
+  border: 3px solid #7b8c86;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgb(170, 170, 170);
+  width: 80%;
+  margin: 25px auto;
+  margin-bottom: 30px;
+  line-height: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* li a:hover{
+  border-bottom: 3px solid #0c3325;
+  transition: 0.1s ;
+}
+
+ */
