@@ -121,18 +121,14 @@
     width: 25px;
     align-items: center;
     margin: 5px auto;
-    display: block;
 }
 
 .box1 p{
-    background-color: none;
     border: 2px solid rgb(182, 181, 181);
     color: rgb(64, 72, 84);
     padding: 3px 15px;
     text-align: center;
-    text-decoration: none;
     font-weight: bold;
-    display: inline-block;
     font-size: 10px;
     margin: 4px 10px;
     border-radius: 50px;
