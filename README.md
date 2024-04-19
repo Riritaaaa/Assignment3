@@ -1,4 +1,5 @@
 # path
+งาน ogs Daily News : http://localhost:3000
 
 งาน Workshop : http://localhost:3000/workshop
 
