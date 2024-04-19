@@ -31,6 +31,7 @@ const workshop = () => {
 
       {/* ส่วนของ banner */}
       <div className={stylesworkshop.bg}>
+        <div className={stylesworkshop.in}>
         <div className={stylesworkshop.text}>
           <div className={stylesworkshop.textim}>Explore the sights</div>
           <div className={stylesworkshop.textim}>of the Azores</div>
@@ -48,6 +49,7 @@ const workshop = () => {
             <img className={stylesworkshop.left} src={right} />
           </div>
         </div>
+        </div>
       </div>
 
       {/* ส่วนของ top value */}
@@ -55,7 +57,7 @@ const workshop = () => {
         style={{
           fontSize: 48,
           textAlign: "center",
-          marginTop: 80,
+          marginTop: 120,
           fontWeight: 700,
         }}
       >
@@ -66,14 +68,14 @@ const workshop = () => {
           color: "#707070",
           fontSize: 18,
           textAlign: "center",
-          marginTop: 25,
+          marginTop: 32,
           fontWeight: 500,
         }}
       >
         Try variety of benefirts when using our services
       </p>
       <div className={stylesworkshop.columngroup}>
-        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
+        <div style={{ marginBottom:20, textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={plane} />
           </div>
@@ -82,7 +84,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
+        <div style={{ marginBottom:20, textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={money} />
           </div>
@@ -91,7 +93,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
+        <div style={{marginBottom:20, textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={people} />
           </div>
@@ -100,7 +102,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
+        <div style={{ marginBottom:20, textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={people} />
           </div>
@@ -112,8 +114,8 @@ const workshop = () => {
       </div>
 
       {/* ส่วนของ choose tour */}
+      <div style={{marginLeft:100,marginRight:67}}>
       <h1
-        className={stylesworkshop.choose}
         style={{
           fontSize: 48,
           fontWeight: 700,
@@ -121,7 +123,7 @@ const workshop = () => {
       >
         Choose your tour
       </h1>
-      <div style={{ /* padding:"0 80px", */ margin: "auto" }}>
+      <div style={{ margin: "auto" }}>
         <div className={stylesworkshop.columngroup2}>
           <div className={stylesworkshop.box}>
             <div className={stylesworkshop.inside1}>
@@ -201,6 +203,7 @@ const workshop = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
       <button className={stylesworkshop.seeall}>See all</button>
     </div>

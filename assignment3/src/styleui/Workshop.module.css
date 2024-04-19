@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .containerw{
@@ -12,7 +13,7 @@
 }
 
 .navul{
-    padding: 10px 0;
+    margin-top: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,8 +31,7 @@
     list-style: none;
     font-size: 18px;
     font-weight: 500;
-    padding: 0 10px;
-    margin: auto 15px;
+    margin: auto 40px;
 }
 
 .bar{
@@ -44,22 +44,26 @@
     width: 100%;
     height: 660px;
     border-radius: 30px;
-    margin: 10px auto auto;
+    margin: 40px auto auto;
     background-image: url("@assets/background.jpg");
     background-size: 1181px 660px;
-    padding: 8% 0 0 8.5%;
+   /*  padding: 8% 0 0 8.5%; */
+}
+
+.in{
+    padding: 80px 0 0 100px;
 }
 
 .textim,.textim2{
     font-weight: 700;
     font-size: 64px;
     flex-wrap: wrap;
-    line-height: 75px;
+    line-height: 77.45px
 }
 
 .text{
     flex-direction: column;
-    margin-bottom: 2%;
+    margin-bottom: 32px;
 }
 
 .textim2{
@@ -67,6 +71,7 @@
     font-size: 16px;
     font-weight: 500;
     color: white;
+    
 }
 
 .buttonbook{
@@ -76,14 +81,14 @@
     border: none;
     border-radius: 20px;
     width: 180px;
-    padding: 15px 0;
+    height: 52px;
     color: black;
-    margin: 35px 0 0 0;
+    margin: 56px 0 0 0;
 }
 
 .circle, .circle2{
     cursor: pointer;
-    margin: 14% 0 0 0;
+    margin: 150px 0 64px 0;
     width: 53px;
     height: 53px;
     border: 2px solid white;
@@ -98,7 +103,7 @@
 }
 
 .circle2{
-    margin: 14% 0 0 25px;
+    margin-left: 24px;
     background-color: black;
     border: 2px solid rgb(0, 0, 0);
 }
@@ -107,8 +112,8 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content:space-between;
-    margin: 60px auto 80px;
+    justify-content:center;
+    margin: 68px auto 100px;
 }
 
 .circle3{
@@ -142,21 +147,22 @@
 }
 
 .columngroup2{
-    width: 85%;
+    width: 100%;
     flex-wrap: wrap;
     display: flex;
+    margin: 60px auto;
+    margin-bottom: 0;
     justify-content: center;
-    margin: 40px auto;
 }
 
 .box{
-    margin: auto;
-    margin-bottom: 25px;
     border: 2px solid #E0E0E0;
     background-color: white;
     width: 222px;
     height: 325px;
+    margin: auto;
     border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 .inside1,.inside2,.inside3,.inside4{
@@ -210,6 +216,7 @@
     flex-wrap: wrap;
     line-height: 1.75rem;
     width: 140px;
+    margin-left: 20px;
 }
 
 .circlenext{
@@ -219,17 +226,19 @@
     width: 33px;
     height: 32px;
     border-radius: 100px;
-    margin-top: 15px;
+    margin-top: 9px;
+    margin-left: 3px;
     display: flex;
 }
 
 .seeall{
-    margin: 70px auto;
+    margin: 60px auto 65px;
     width: 180px;
     border: 1px solid black;
     background-color: white;
     border-radius: 50px;
-    padding: 18px 0;
+    align-items: center;
+    height: 69px;
     font-size: 20px;
     font-weight: 500;
     display: flex;
@@ -244,8 +253,7 @@
 
 .detailbox{
     display:flex;
-    margin-top: 32px;
-    justify-content: space-evenly;
+    margin-top: 38px;
 }
 
 .arrownext{
@@ -254,8 +262,3 @@
     height: 10.35px;
     margin-top: 9px;
 } 
-
-.choose{
-    width: 85%;
-    margin: auto;
-}
