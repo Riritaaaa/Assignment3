@@ -9,18 +9,20 @@ import star from "@assets/star_icon.png";
 
 const workshop = () => {
   return (
-    <div className="containerw">
+    <div className={stylesworkshop.containerw}>
       {/* ส่วนของ navbar */}
       <ul className={stylesworkshop.navul}>
-        <div style={{ margin: "auto", marginLeft: 0 }}>
+        <div>
           <li className={stylesworkshop.title}>IsLand</li>
         </div>
-        <li className={stylesworkshop.navli}>Our tours</li>
-        <li className={stylesworkshop.navli}>About us</li>
-        <li className={stylesworkshop.navli}>About us</li>
-        <li className={stylesworkshop.navli}>Booking</li>
-        <li className={stylesworkshop.navli}>FAQ</li>
-        <div style={{ margin: "auto", marginRight: 0 }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <li className={stylesworkshop.navli}>Our tours</li>
+          <li className={stylesworkshop.navli}>About us</li>
+          <li className={stylesworkshop.navli}>About us</li>
+          <li className={stylesworkshop.navli}>Booking</li>
+          <li className={stylesworkshop.navli}>FAQ</li>
+        </div>
+        <div>
           <li>
             <img className={stylesworkshop.bar} src={bar} />
           </li>
@@ -47,7 +49,7 @@ const workshop = () => {
       </div>
 
       {/* ส่วนของ top value */}
-      <h1
+         <h1
         style={{
           fontSize: 48,
           textAlign: "center",
@@ -69,7 +71,7 @@ const workshop = () => {
         Try variety of benefirts when using our services
       </p>
       <div className={stylesworkshop.columngroup}>
-        <div style={{ textAlign: "center" }}>
+        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={plane} />
           </div>
@@ -78,7 +80,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{ textAlign: "center" }}>
+        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={money} />
           </div>
@@ -87,7 +89,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{ textAlign: "center" }}>
+        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={people} />
           </div>
@@ -96,7 +98,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{ textAlign: "center" }}>
+        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={people} />
           </div>
@@ -108,16 +110,15 @@ const workshop = () => {
       </div>
 
       {/* ส่วนของ choose tour */}
-      <div style={{ width: 980, margin: "auto" }}>
-        <h1
+      <h1 className={stylesworkshop.choose}
           style={{
             fontSize: 48,
-            margin: "80px 0px 0px 0px",
             fontWeight: 700,
           }}
         >
           Choose your tour
         </h1>
+        <div style={{ /* padding:"0 80px", */margin: "auto" }}>
         <div className={stylesworkshop.columngroup2}>
           <div className={stylesworkshop.box}>
             <div className={stylesworkshop.inside1}>

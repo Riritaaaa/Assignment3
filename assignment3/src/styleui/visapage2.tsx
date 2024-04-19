@@ -8,7 +8,7 @@ import money from "@assets/money.png";
 import bag from "@assets/bag.png";
 import calen from "@assets/calendarwh.png";
 import down from "@assets/arrowdown.png";
-import nav from "@assets/nav.png";
+import nav from "@assets/menu.png";
 
 const visapage2 = () => {
   return (
@@ -55,13 +55,7 @@ const visapage2 = () => {
       </div>
 
       <div className={stylesvisa.box1}>
-        <div
-          style={{
-            borderRight: "1px solid rgb(217, 217, 217)",
-            paddingRight: 45,
-          }}
-          className={stylesvisa.row1}
-        >
+        <div className={stylesvisa.row1}>
           <p>Income</p>
           <span
             style={{ display: "flex", fontSize: 14, color: "rgb(31, 177, 31)" }}
@@ -70,6 +64,7 @@ const visapage2 = () => {
             &nbsp;$9,302.00
           </span>
         </div>
+        <div style={{borderLeft:"1px solid rgb(221, 221, 221)", height:50}}></div>
         <div className={stylesvisa.row1}>
           <p>Expense</p>
           <span style={{ display: "flex", fontSize: 14, color: "red" }}>
@@ -89,7 +84,13 @@ const visapage2 = () => {
         >
           Detail of movements
         </h3>
-        <p style={{ display:"flex", fontSize: 14, color: "black" }}>weekly&nbsp;&nbsp;<img style={{ width: 12,height:12,alignSelf:"center",marginTop:3 }} src={down} /></p>
+        <p style={{ display: "flex", fontSize: 14, color: "black" }}>
+          weekly&nbsp;&nbsp;
+          <img
+            style={{ width: 12, height: 12, alignSelf: "center", marginTop: 3 }}
+            src={down}
+          />
+        </p>
       </div>
 
       <div className={stylesvisa.boxlist1}>
@@ -111,7 +112,6 @@ const visapage2 = () => {
             display: "flex",
             fontSize: 14,
             color: "red",
-            marginLeft: 60,
           }}
         >
           $170&nbsp;
@@ -138,7 +138,6 @@ const visapage2 = () => {
             display: "flex",
             fontSize: 14,
             color: "rgb(31, 177, 31)",
-            marginLeft: 88,
           }}
         >
           $800&nbsp;
@@ -165,7 +164,6 @@ const visapage2 = () => {
             display: "flex",
             fontSize: 14,
             color: "red",
-            marginLeft: 114,
           }}
         >
           $50&nbsp;
@@ -192,7 +190,6 @@ const visapage2 = () => {
             display: "flex",
             fontSize: 14,
             color: "rgb(31, 177, 31)",
-            marginLeft: 98,
           }}
         >
           $4,200&nbsp;
@@ -218,7 +215,6 @@ const visapage2 = () => {
             display: "flex",
             fontSize: 14,
             color: "red",
-            marginLeft: 115,
           }}
         >
           $37&nbsp;
