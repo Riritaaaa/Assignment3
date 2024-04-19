@@ -15,7 +15,7 @@ const workshop = () => {
         <div>
           <li className={stylesworkshop.title}>IsLand</li>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{  flexWrap:"wrap",display: "flex", justifyContent: "center" }}>
           <li className={stylesworkshop.navli}>Our tours</li>
           <li className={stylesworkshop.navli}>About us</li>
           <li className={stylesworkshop.navli}>About us</li>
@@ -31,9 +31,11 @@ const workshop = () => {
 
       {/* ส่วนของ banner */}
       <div className={stylesworkshop.bg}>
-        <div className={stylesworkshop.textim}>
-          Explore the sights of the Azores
+        <div className={stylesworkshop.text}>
+          <div className={stylesworkshop.textim}>Explore the sights</div>
+          <div className={stylesworkshop.textim}>of the Azores</div>
         </div>
+
         <div className={stylesworkshop.textim2}>
           A place where noture and adventure unite
         </div>
@@ -49,7 +51,7 @@ const workshop = () => {
       </div>
 
       {/* ส่วนของ top value */}
-         <h1
+      <h1
         style={{
           fontSize: 48,
           textAlign: "center",
@@ -71,7 +73,7 @@ const workshop = () => {
         Try variety of benefirts when using our services
       </p>
       <div className={stylesworkshop.columngroup}>
-        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
+        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={plane} />
           </div>
@@ -80,7 +82,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
+        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={money} />
           </div>
@@ -89,7 +91,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
+        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={people} />
           </div>
@@ -98,7 +100,7 @@ const workshop = () => {
             xxxxxxxx xxxxxxxx xxxx xxxxxxxxxxxxx
           </p>
         </div>
-        <div style={{margin:"0 auto 25px", textAlign: "center" }}>
+        <div style={{ margin: "0 auto 25px", textAlign: "center" }}>
           <div className={stylesworkshop.circle3}>
             <img className={stylesworkshop.icon} src={people} />
           </div>
@@ -110,15 +112,16 @@ const workshop = () => {
       </div>
 
       {/* ส่วนของ choose tour */}
-      <h1 className={stylesworkshop.choose}
-          style={{
-            fontSize: 48,
-            fontWeight: 700,
-          }}
-        >
-          Choose your tour
-        </h1>
-        <div style={{ /* padding:"0 80px", */margin: "auto" }}>
+      <h1
+        className={stylesworkshop.choose}
+        style={{
+          fontSize: 48,
+          fontWeight: 700,
+        }}
+      >
+        Choose your tour
+      </h1>
+      <div style={{ /* padding:"0 80px", */ margin: "auto" }}>
         <div className={stylesworkshop.columngroup2}>
           <div className={stylesworkshop.box}>
             <div className={stylesworkshop.inside1}>
