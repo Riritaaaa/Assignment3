@@ -6,14 +6,15 @@ import green from "@assets/green.png";
 import dollar from "@assets/dollar.png";
 import money from "@assets/money.png";
 import bag from "@assets/bag.png";
-import calen from "@assets/calendar.png";
-import humbur from "@assets/hamburger.png";
+import calen from "@assets/calendarwh.png";
+import down from "@assets/arrowdown.png";
+import nav from "@assets/nav.png";
 
 const visapage2 = () => {
   return (
     <div className={stylesvisa.containervisa2}>
       <div className={stylesvisa.rowconvisa2}>
-        <img style={{ width: 18 }} src={humbur} />
+        <img style={{ width: 18 }} src={nav} />
         <img style={{ width: 18 }} src={calen} />
       </div>
       <p style={{ textAlign: "center" }} className={stylesvisa.avail2}>
@@ -88,7 +89,7 @@ const visapage2 = () => {
         >
           Detail of movements
         </h3>
-        <p style={{ fontSize: 14, color: "black" }}>weekly v</p>
+        <p style={{ display:"flex", fontSize: 14, color: "black" }}>weekly&nbsp;&nbsp;<img style={{ width: 12,height:12,alignSelf:"center",marginTop:3 }} src={down} /></p>
       </div>
 
       <div className={stylesvisa.boxlist1}>

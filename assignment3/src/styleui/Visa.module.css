@@ -229,3 +229,7 @@ span{
     margin: 15px auto;
     box-shadow: 2px 2px 3px #405468;
 }
+
+.hover:hover{
+    opacity: 0.8;
+}
