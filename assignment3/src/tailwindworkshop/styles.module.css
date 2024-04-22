@@ -1,0 +1,22 @@
+/* .card {
+    @apply w-full h-full bg-blue-950 shadow-lg shadow-slate-500 flex flex-col rounded-3xl transition-all justify-center lg:w-[500px] lg:h-[280px] lg:flex-row lg:flex items-center lg:justify-evenly
+}
+
+.containerCard {
+    @apply w-[500px] h-[280px]
+}
+
+.containerCard:hover .card {
+    transform: rotateY(90deg);
+    transition: all 0.3s ease-in;
+}
+
+.card2{
+    transform: rotateY(90deg);
+    display: none;
+}
+.containerCard:hover .card2 {
+    transform: rotateY(90deg);
+    transition: all 0.3s ease-in;
+    display: flex;
+} */

@@ -9,6 +9,8 @@ import Modulecss from "@styleui/modulecss";
 import Workshop from "@styleui/workshop";
 import VisaPage1 from "@styleui/visapage1";
 import VisaPage2 from "@styleui/visapage2";
+import Workshop_tail from "@tailwindworkshop/Workshop_tail";
+import Workshop_back from "@tailwindworkshop/Workshop_back";
 
 /* import "./App.css"; */
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/workshop" element={<Workshop/>} />
         <Route path="/visa1" element={<VisaPage1/>} />
         <Route path="/visa2" element={<VisaPage2/>} />
+        <Route path="/tailwindfront" element={<Workshop_tail/>} />
+        <Route path="/tailwindback" element={<Workshop_back/>} />
         <Route path="/home" element={<LayoutHome/>} >
           <Route index element={<HomePage/>} />
           <Route path="allnew" element={<AllNew/>} />

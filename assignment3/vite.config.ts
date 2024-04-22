@@ -11,6 +11,7 @@ export default defineConfig({
       "@pages": path.resolve(__dirname, "src/pages"),
       "@assets": path.resolve(__dirname, "src/assets"),
       "@styleui": path.resolve(__dirname, "src/styleui"),
+      "@tailwindworkshop": path.resolve(__dirname, "src/tailwindworkshop"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },
