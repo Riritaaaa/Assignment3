@@ -28,7 +28,7 @@ const Workshop_tail = () => {
             </p>
             <p className="text-white mb-[25px]">Computer Science</p>
             <Link to="/tailwindback">
-              <p className="text-sky-600 font-medium text-base px-[15px] py-[5px] bg-white rounded-full border-2 border-white">
+              <p className="text-sky-600 font-medium text-base px-[15px] py-[5px] bg-white rounded-full border-2 border-white hover:bg-gradient-to-r from-sky-400 to-blue-500 transition-all hover:text-white">
                 Rita Chimnoi
               </p>
             </Link>

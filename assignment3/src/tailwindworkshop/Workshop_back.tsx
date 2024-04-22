@@ -29,7 +29,7 @@ const Workshop_back = () => {
             <p className="mb-[12px] text-center font-light text-sm lg:text-left">
               Computer Science
             </p>
-            <div className="flex mb-[5px] lg:ml-0 lg:mb-[15px]">
+            <div className="flex mb-[12px] lg:ml-0">
               <FontAwesomeIcon
                 className="border-solid border-[2px] border-white bg-gradient-to-t from-sky-400 from-1% to-blue-900 to-60% rounded-full p-[6px] mr-3 self-center w-[12px] h-[12px]"
                 icon={faPhone}
@@ -43,7 +43,7 @@ const Workshop_back = () => {
                 </div>
               </div>
             </div>
-            <div className="flex mb-[5px] text-white lg:ml-0 lg:mb-[15px]">
+            <div className="flex mb-[12px] text-white lg:ml-0">
               <FontAwesomeIcon
                   className="border-solid border-[2px] border-white bg-gradient-to-t from-sky-400 from-1% to-blue-900 to-60% rounded-full p-[6px] mr-3 self-center w-[12px] h-[12px]"
                 icon={faEnvelope}
@@ -57,7 +57,7 @@ const Workshop_back = () => {
                 </div>
               </div>
             </div>
-            <div className="flex mb-[5px] lg:ml-0 lg:mb-[15px]">
+            <div className="flex mb-[12px] lg:ml-0">
               <FontAwesomeIcon
                 className="border-solid border-[2px] border-white bg-gradient-to-t from-sky-400 from-1% to-blue-900 to-60% rounded-full p-[6px] mr-3 self-center w-[12px] h-[12px]"
                 icon={faLocationDot}
