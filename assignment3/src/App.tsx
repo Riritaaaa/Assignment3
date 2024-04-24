@@ -11,7 +11,8 @@ import VisaPage1 from "@styleui/visapage1";
 import VisaPage2 from "@styleui/visapage2";
 import Workshop_tail from "@tailwindworkshop/Workshop_tail";
 import Workshop_back from "@tailwindworkshop/Workshop_back";
-
+import Antframe from "@antframework/antframe"
+import Workshop_ant from "@antframework/Workshop_ant";
 /* import "./App.css"; */
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
         <Route path="/visa2" element={<VisaPage2/>} />
         <Route path="/tailwindfront" element={<Workshop_tail/>} />
         <Route path="/tailwindback" element={<Workshop_back/>} />
+        <Route path="/ant" element={<Antframe/>} />
+        <Route path="/workshopant" element={<Workshop_ant/>} />
         <Route path="/home" element={<LayoutHome/>} >
           <Route index element={<HomePage/>} />
           <Route path="allnew" element={<AllNew/>} />

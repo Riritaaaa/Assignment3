@@ -167,10 +167,10 @@
     display: flex;
 }
 
-span{
+/* span{
     font-weight: 600;
 }
-
+ */
 .rowlist{
     margin-left: 20px;
     flex-grow: 1;

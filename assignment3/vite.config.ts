@@ -12,6 +12,7 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "src/assets"),
       "@styleui": path.resolve(__dirname, "src/styleui"),
       "@tailwindworkshop": path.resolve(__dirname, "src/tailwindworkshop"),
+      "@antframework": path.resolve(__dirname, "src/antframework"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },

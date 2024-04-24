@@ -29,6 +29,7 @@
         "@assets/*": ["assets/*"],
         "@styleui/*": ["styleui/*"],
         "@tailwindworkshop/*": ["tailwindworkshop/*"],
+        "@antframework/*": ["antframework/*"],
       },
   },
   "include": ["src"],

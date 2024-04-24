@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "antd": "^5.16.4",
     "reactjs-flip-card": "^2.0.3"
   }
 }
