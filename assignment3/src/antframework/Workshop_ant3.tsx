@@ -47,7 +47,7 @@ const Workshop_ant3: React.FC = () => {
         name="gender"
         rules={[{ required: true, message: "Please select your gender!" }]}
       >
-        <Radio.Group>
+        <Radio.Group style={{marginBottom:5}}>
           <Radio value="men"> ชาย </Radio>
           <Radio value="women"> หญิง </Radio>
         </Radio.Group>
@@ -90,7 +90,7 @@ const Workshop_ant3: React.FC = () => {
           },
         ]}
       >
-        <Switch />
+        <Switch style={{marginBottom:5}}/>
       </Form.Item>
     </>
   );
