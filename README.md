@@ -10,3 +10,5 @@
 งาน Card : http://localhost:3000/tailwindfront, http://localhost:3000/tailwindback
 
 งาน Ant Design : http://localhost:3000/workshopant
+
+งาน Workshop Redux : http://localhost:3000/regisredux
