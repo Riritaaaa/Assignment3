@@ -11,11 +11,12 @@ import VisaPage1 from "@styleui/visapage1";
 import VisaPage2 from "@styleui/visapage2";
 import Workshop_tail from "@tailwindworkshop/Workshop_tail";
 import Workshop_back from "@tailwindworkshop/Workshop_back";
-// import Antframe from "@antframework/antframe"
 import Workshop_ant from "@antframework/Workshop_ant";
-/* import "./App.css"; */
+import Counter from "./components/Counter";
+import Regisredux from "@components/Workshop_redux";
 
 function App() {
+  
   return (
     <>
       <Routes>
@@ -27,8 +28,9 @@ function App() {
         <Route path="/visa2" element={<VisaPage2/>} />
         <Route path="/tailwindfront" element={<Workshop_tail/>} />
         <Route path="/tailwindback" element={<Workshop_back/>} />
-        {/* <Route path="/ant" element={<Antframe/>} /> */}
         <Route path="/workshopant" element={<Workshop_ant/>} />
+        <Route path="/count" element={<Counter/>} />
+        <Route path="/regisredux" element={<Regisredux/>} />
         <Route path="/home" element={<LayoutHome/>} >
           <Route index element={<HomePage/>} />
           <Route path="allnew" element={<AllNew/>} />
@@ -36,6 +38,17 @@ function App() {
           <Route path="detail/:typeName/:id" element={<DetailNew/>} />
         </Route>
       </Routes>
+    {/*   <div className="custom-layout">
+        <div className="main-layout">
+          <h1>Vite + React + Redux</h1>
+          <div className="card">
+            <Counter></Counter>
+          </div>
+          <p className="read-the-docs">
+            Click on the Vite and React logos to learn more
+          </p>
+        </div>
+      </div> */}
     </>
   );
 }

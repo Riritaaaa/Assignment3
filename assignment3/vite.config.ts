@@ -14,6 +14,7 @@ export default defineConfig({
       "@tailwindworkshop": path.resolve(__dirname, "src/tailwindworkshop"),
       "@antframework": path.resolve(__dirname, "src/antframework"),
       "@globalredux": path.resolve(__dirname, "src/globalredux"),
+      "@store": path.resolve(__dirname, "src/store"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },
