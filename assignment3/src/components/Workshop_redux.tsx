@@ -78,7 +78,7 @@ const Workshop_redux = () => {
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <Input />
+              <Input.Password />
             </Form.Item>
 
             <Button
