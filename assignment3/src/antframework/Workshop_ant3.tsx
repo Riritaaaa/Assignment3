@@ -15,10 +15,6 @@ const defaultCheckedList = [""];
 
 const { Text } = Typography;
 
-const onChange = (checked: boolean) => {
-  console.log(`switch to ${checked}`);
-};
-
 const Workshop_ant3: React.FC = () => {
   const [checkedList, setCheckedList] =
     useState<CheckboxValueType[]>(defaultCheckedList);
@@ -81,15 +77,20 @@ const Workshop_ant3: React.FC = () => {
         className="[&_div]:!flex-row [&_div_div:last-child]:!w-auto"
         label="ยอมรับเงื่อนไข : "
         name="terms"
-        valuePropName="checked"
         rules={[
           {
-            required: true,
-            message: "Please accept!",
+            validator(_, value) {
+              console.log(value);
+              if (value) {
+                return Promise.resolve();
+              } else {
+                return Promise.reject(new Error("Plese accept condition!"));
+              }
+            },
           },
         ]}
       >
-        <Switch onChange={onChange} />
+        <Switch />
       </Form.Item>
     </>
   );

@@ -13,6 +13,7 @@ export default defineConfig({
       "@styleui": path.resolve(__dirname, "src/styleui"),
       "@tailwindworkshop": path.resolve(__dirname, "src/tailwindworkshop"),
       "@antframework": path.resolve(__dirname, "src/antframework"),
+      "@globalredux": path.resolve(__dirname, "src/globalredux"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },

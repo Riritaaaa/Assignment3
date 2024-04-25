@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { Button, Flex } from "antd";
 import Icon, {
   HomeOutlined,
@@ -46,3 +46,4 @@ const antframe = () => {
 };
 
 export default antframe;
+ */

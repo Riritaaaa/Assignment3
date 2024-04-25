@@ -30,6 +30,7 @@
         "@styleui/*": ["styleui/*"],
         "@tailwindworkshop/*": ["tailwindworkshop/*"],
         "@antframework/*": ["antframework/*"],
+        "@globalredux/*": ["globalredux/*"],
       },
   },
   "include": ["src"],
