@@ -6,8 +6,6 @@ import { Checkbox, Divider } from "antd";
 import type { CheckboxProps, GetProp } from "antd";
 import { Switch } from "antd";
 
-type FieldType = {};
-
 type CheckboxValueType = GetProp<typeof Checkbox.Group, "value">[number];
 
 const CheckboxGroup = Checkbox.Group;
@@ -48,22 +46,23 @@ const Workshop_ant3: React.FC = () => {
       </Form.Item>
 
       <Form.Item
-        label="Gender"
+        className="[&_div]:!flex-row [&_div_div:last-child]:!w-auto"
+        label="Gender : "
         name="gender"
         rules={[{ required: true, message: "Please select your gender!" }]}
       >
         <Radio.Group>
-          <Radio value="men"> Male </Radio>
-          <Radio value="women"> Female </Radio>
+          <Radio value="men"> ชาย </Radio>
+          <Radio value="women"> หญิง </Radio>
         </Radio.Group>
       </Form.Item>
 
-      <Form.Item label="งานอดิเรก">
+      <Form.Item label="งานอดิเรก" name="hobbies">
         <Checkbox onChange={onCheckAllChange} checked={checkAll}>
           เลือกทั้งหมด
         </Checkbox>
 
-        <Divider style={{ margin: "10px 0" }} />
+        <Divider style={{ margin: "8px 0" }} />
 
         <CheckboxGroup
           style={{
@@ -75,20 +74,18 @@ const Workshop_ant3: React.FC = () => {
           value={checkedList}
           onChange={onChangelist}
         />
+        <Input style={{ marginTop: 10 }} placeholder="ระบุ" />
       </Form.Item>
 
-      <Form.Item className="mb-4" name="text">
-        <Input placeholder="ระบุ" />
-      </Form.Item>
-
-      <Form.Item 
+      <Form.Item
+        className="[&_div]:!flex-row [&_div_div:last-child]:!w-auto"
         label="ยอมรับเงื่อนไข : "
         name="terms"
         valuePropName="checked"
         rules={[
           {
             required: true,
-            message: "Please accept the terms and conditions!",
+            message: "Please accept!",
           },
         ]}
       >

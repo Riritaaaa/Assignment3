@@ -16,7 +16,7 @@ const Regisform: React.FC = () => {
       <Form.Item<FieldType>
         label="Username"
         name="username"
-        className="w-[256px]"
+        className="w-[268px]"
         rules={[{ required: true, message: "Please input your username!" }]}
       >
         <Input />

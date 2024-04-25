@@ -56,12 +56,12 @@ const Workshop_ant: React.FC = () => {
             <Steps current={current} items={items} />
             <div>{steps[current].content}</div>
 
-            <div style={{ marginBottom: 15, marginTop: 30 }}>
+            <div style={{ marginBottom: 10, marginTop: 30 }}>
               {current > 0 && (
                 <Button
                   onClick={() => prev()}
                   style={{ backgroundColor: "rgb(249 115 22)" }}
-                  className="buttonant text-white px-7 mr-3"
+                  className="buttonant text-white px-8 mr-3"
                 >
                   PREVIOUS
                 </Button>
@@ -72,7 +72,7 @@ const Workshop_ant: React.FC = () => {
                   style={{ backgroundColor: "rgb(147 51 234)" }}
                   type="primary"
                   htmlType="submit"
-                  className="buttonant text-white px-11"
+                  className="buttonant text-white px-12"
                 >
                   NEXT
                 </Button>
@@ -83,7 +83,7 @@ const Workshop_ant: React.FC = () => {
                   style={{ backgroundColor: "rgb(219 39 119)" }}
                   type="primary"
                   htmlType="submit"
-                  className="buttonant text-white px-11"
+                  className="buttonant text-white px-12"
                 >
                   DONE
                 </Button>
