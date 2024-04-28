@@ -14,6 +14,8 @@ import Workshop_back from "@tailwindworkshop/Workshop_back";
 import Workshop_ant from "@antframework/Workshop_ant";
 import Counter from "./components/Counter";
 import Regisredux from "@components/Workshop_redux";
+import Fetchapi from "@apicourse/fetchapi";
+import Workshopapi from "@apicourse/workshopapi";
 
 function App() {
   
@@ -31,6 +33,8 @@ function App() {
         <Route path="/workshopant" element={<Workshop_ant/>} />
         <Route path="/count" element={<Counter/>} />
         <Route path="/regisredux" element={<Regisredux/>} />
+        <Route path="/api" element={<Fetchapi/>} />
+        <Route path="/workshopapi" element={<Workshopapi/>} />
         <Route path="/home" element={<LayoutHome/>} >
           <Route index element={<HomePage/>} />
           <Route path="allnew" element={<AllNew/>} />

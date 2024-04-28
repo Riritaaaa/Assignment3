@@ -15,6 +15,7 @@ export default defineConfig({
       "@antframework": path.resolve(__dirname, "src/antframework"),
       "@globalredux": path.resolve(__dirname, "src/globalredux"),
       "@store": path.resolve(__dirname, "src/store"),
+      "@apicourse": path.resolve(__dirname, "src/apicourse"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },
