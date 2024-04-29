@@ -2,11 +2,9 @@
 
 .containerapi{
     font-family: "Sedan", serif;
-
 }
 
 .cardapi{
-    
     cursor: pointer;
     transition: all 100ms ease-in-out;
 }
@@ -21,7 +19,11 @@
     rgba(34, 34, 34,0.85),
     transparent
   );
-  width: 250px;
+  width: 260px;
   padding-bottom: 10px;
-   padding-top: 15px; 
+  padding-top: 15px; 
+}
+
+.backim{
+    background-image: url(../assets//gif.gif);
 }

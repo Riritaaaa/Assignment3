@@ -1,12 +1,11 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./api.css";
-import { Divider, Modal } from "antd";
-import { FloatButton } from "antd";
-import dis from "@assets/disney.png";
+import { Divider, Modal, Spin, Input, FloatButton } from "antd";
+import dis from "@assets/logodisney.png";
 import mickey from "@assets/mickey.png";
-import { Spin } from "antd";
-import { motion, Variants } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { SmileOutlined } from "@ant-design/icons";
 
 type disney = {
   info: {
@@ -35,29 +34,24 @@ type disneyCharacter = {
   url: string;
   __v: number;
 };
-const variants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+
+const { Search } = Input;
 
 const workshopapi = () => {
   const [data, setData] = useState<disney>();
   const [des, setDes] = useState<disneyCharacter>();
   const [isLoading, setIsLoading] = useState(true);
-
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
   };
+
+  useEffect(() => {
+    console.log(isInView, "isInView");
+  }, [isInView]);
 
   const handleOk = () => {
     setIsModalOpen(false);
@@ -85,11 +79,19 @@ const workshopapi = () => {
     disneyData();
   }, []);
 
+  const handleSearch = (value: string) => {
+    setSearchTerm(value);
+  };
+
   return (
     <>
       <div className="containerapi bg-gradient-to-r from-indigo-950 to-indigo-800 h-full py-8 min-h-screen">
-        <div className="backim">
-          <img className="w-[250px] m-auto my-5" src={dis}></img>
+        <div className="backim min-h-screen">
+          <img
+            className="w-[250px] m-auto py-5 pb-8"
+            src={dis}
+            alt="Disney Logo"
+          />
 
           <Modal
             className="containerapi border-solid"
@@ -100,7 +102,11 @@ const workshopapi = () => {
             footer={null}
           >
             <div className="flex flex-row">
-              <img className="w-[30px] self-center mr-1" src={mickey}></img>
+              <img
+                className="w-[30px] self-center mr-1"
+                src={mickey}
+                alt="Mickey Mouse"
+              />
               <p className="text-xl font-bold">{des?.name}</p>
             </div>
 
@@ -109,11 +115,12 @@ const workshopapi = () => {
               <img
                 className="m-auto w-4/6 rounded-lg mb-5"
                 src={des?.imageUrl}
-              ></img>
+                alt={des?.name}
+              />
             </div>
             <div>
               <p className="mb-2 text-base ml-8">
-                Films :
+                Films :{" "}
                 {des?.films.slice(0, 1).length ? des.films.slice(0, 1) : "-"}
               </p>
               <p className="mb-2 text-base ml-8">
@@ -125,6 +132,7 @@ const workshopapi = () => {
               </p>
             </div>
           </Modal>
+
           {isLoading ? (
             <div className="text-white">
               <Spin
@@ -132,59 +140,126 @@ const workshopapi = () => {
                 size="large"
                 fullscreen
                 className="text-white font-semibold"
-              ></Spin>
+              />
             </div>
           ) : (
             <>
               {data ? (
-                <motion.div
-                  className="flex flex-row flex-wrap justify-center items-center"
-                  variants={variants}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  <div className="flex flex-row flex-wrap justify-center items-center">
-                    {data.data.slice(0, 35).map((item) => {
-                      if (
-                        item.films.length === 0 &&
-                        item.tvShows.length === 0
-                      ) {
-                        return null;
+                <div className="flex flex-col px-24">
+                  <div className="flex lg:flex-row justify-between flex-col my-1">
+                    <p className="text-white lg:ml-14 lg:mb-0 text-lg mb-4 text-center">
+                      Show{" "}
+                      {
+                        data.data
+                          .filter((item) =>
+                            item.name
+                              .toLowerCase()
+                              .includes(searchTerm.toLowerCase())
+                          )
+                          .filter((item) => !item.name.startsWith("I"))
+                          .filter((item) => !item.name.startsWith("Athena"))
+                          .filter(
+                            (item) => !item.name.startsWith("Beheaded Knight")
+                          )
+                          .filter((item) => !item.name.startsWith("Aqua"))
+                          .filter((item) => item.imageUrl).length
+                      }{" "}
+                      of{" "}
+                      {
+                        data.data
+                          .filter((item) => !item.name.startsWith("I"))
+                          .filter((item) => !item.name.startsWith("Athena"))
+                          .filter(
+                            (item) => !item.name.startsWith("Beheaded Knight")
+                          )
+                          .filter((item) => !item.name.startsWith("Aqua"))
+                          .filter((item) => item.imageUrl).length
                       }
-                      return (
-                        <div
-                          // className="cardapi m-5 mx-8 bg-white w-1/6 h-[300px] rounded-lg items-center flex flex-col "
-                          className="cardapi m-5 mx-8 bg-white rounded-lg items-center flex flex-col shadow-lg shadow-gray-500  "
-                          onClick={() => {
-                            setDes(item);
-                            showModal();
-                          }}
-                        >
-                          <div
-                            className="w-[250px] h-[235px] rounded-lg m-1 text-center font-semibold text-lg "
-                            style={{
-                              backgroundImage: `url('${item.imageUrl}')`,
-                              backgroundRepeat: "no-repeat",
-                              backgroundPosition: "center",
-                              backgroundSize: "cover",
-                              color: "white",
+                    </p>
+                    <Search
+                      placeholder="Search..."
+                      allowClear
+                      onSearch={handleSearch}
+                      style={{ width: 230 }}
+                      className="rounded-full m-auto lg:mr-14"
+                    />
+                  </div>
+
+                  <div className="flex flex-row flex-wrap items-center mt-3 justify-center">
+                    {data.data
+                      .filter((item) =>
+                        item.name
+                          .toLowerCase()
+                          .includes(searchTerm.toLowerCase())
+                      )
+                      .filter((item) => !item.name.startsWith("I"))
+                      .filter((item) => !item.name.startsWith("Athena"))
+                      .filter(
+                        (item) => !item.name.startsWith("Beheaded Knight")
+                      )
+                      .filter((item) => !item.name.startsWith("Aqua"))
+                      .filter((item) => item.imageUrl)
+                      .sort((a, b) => a.name.localeCompare(b.name))
+                      .map((item, index) => {
+                       
+                        return (
+                          <motion.div
+                            className="flex flex-row flex-wrap justify-center items-center"
+                            variants={{
+                              hidden: {
+                                opacity: 0,
+                                y: 50,
+                              },
+                              visible: {
+                                opacity: 1,
+                                y: 0,
+                              },
                             }}
+                            transition={{
+                              type: "spring",
+                              delay: 0.5 + index * 0.04,
+                            }}
+                            initial="hidden"
+                            animate="visible"
+                            key={item._id}
                           >
-                            <div className="cname flex justify-center h-[235px] items-end">
-                              <div className="itemname">{item.name}</div>
+                            <div
+                              className="cardapi m-5 mx-8 bg-white rounded-lg items-center flex flex-col shadow-lg shadow-gray-500  "
+                              onClick={() => {
+                                setDes(item);
+                                showModal();
+                              }}
+                            >
+                              <div
+                                className="w-[250px] h-[235px] rounded-lg m-1 text-center font-semibold text-lg "
+                                style={{
+                                  backgroundImage: `url('${item.imageUrl}')`,
+                                  backgroundRepeat: "no-repeat",
+                                  backgroundPosition: "center",
+                                  backgroundSize: "cover",
+                                  color: "white",
+                                }}
+                              >
+                                <div className="cname flex justify-center h-[235px] items-end">
+                                  <div className="itemname">{item.name}</div>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>{" "}
-                </motion.div>
+                          </motion.div>
+                        );
+                      })}
+                  </div>
+                </div>
               ) : (
-                <div>ไม่มีข้อมูล</div>
-              )}{" "}
+                <div className="text-white text-center text-lg mt-[180px]">
+                  <div>
+                    <SmileOutlined style={{ fontSize: 40 }} />
+                    <p className="mt-2">No Data</p>
+                  </div>
+                </div>
+              )}
             </>
           )}
-
           <FloatButton.BackTop />
         </div>
       </div>
