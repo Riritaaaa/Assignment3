@@ -33,6 +33,7 @@
         "@globalredux/*": ["globalredux/*"],
         "@store/*": ["store/*"],
         "@apicourse/*": ["apicourse/*"],
+        "@routes/*": ["routes/*"],
       },
   },
   "include": ["src"],

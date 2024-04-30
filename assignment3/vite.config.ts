@@ -16,6 +16,7 @@ export default defineConfig({
       "@globalredux": path.resolve(__dirname, "src/globalredux"),
       "@store": path.resolve(__dirname, "src/store"),
       "@apicourse": path.resolve(__dirname, "src/apicourse"),
+      "@routes": path.resolve(__dirname, "src/routes"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },
