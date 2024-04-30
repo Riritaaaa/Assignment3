@@ -16,6 +16,10 @@ import Counter from "@components/Counter";
 import Regisredux from "@components/Workshop_redux";
 import Fetchapi from "@apicourse/fetchapi";
 import Workshopapi from "@apicourse/workshopapi";
+import Navmenu from "@routes/navroute";
+import Pokemon from "@pokemon/Homepokemon";
+import Cardpokemon from "@pokemon/cardpokemon";
+import Infoleft from "@pokemon/Infoleft";
 
 const route = createBrowserRouter([
   {
@@ -25,6 +29,10 @@ const route = createBrowserRouter([
   {
     path: "*",
     element: <NotFound />,
+  },
+  {
+    path: "/menu",
+    element: <Navmenu />,
   },
   {
     path: "/css",
@@ -70,6 +78,19 @@ const route = createBrowserRouter([
     path: "/workshopapi",
     element: <Workshopapi />,
   },
+  {
+    path: "/pokemon",
+    element: <Pokemon />,
+  },
+  {
+    path: "/cardpokemon",
+    element: <Cardpokemon />,
+  },
+  {
+    path: "/infopokemon",
+    element: <Infoleft />,
+  },
+
   {
     path: "/home",
     element: <LayoutHome />,

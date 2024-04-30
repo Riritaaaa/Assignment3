@@ -34,6 +34,7 @@
         "@store/*": ["store/*"],
         "@apicourse/*": ["apicourse/*"],
         "@routes/*": ["routes/*"],
+        "@pokemon/*": ["pokemon/*"],
       },
   },
   "include": ["src"],

@@ -201,7 +201,6 @@ const workshopapi = () => {
                       .filter((item) => item.imageUrl)
                       .sort((a, b) => a.name.localeCompare(b.name))
                       .map((item, index) => {
-                       
                         return (
                           <motion.div
                             className="flex flex-row flex-wrap justify-center items-center"
