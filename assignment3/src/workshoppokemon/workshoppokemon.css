@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.containerpokemon{
+    font-family: "Nunito", sans-serif;
+}
+
+.pagination li{
+    font-weight: 600;
+}
+
+:where(.css-dev-only-do-not-override-mzwlov).ant-pagination .ant-pagination-item-active {
+    border-radius: 100%;
+    background-color: #3A5DA8;
+    border: none;
+}
+
+:where(.css-dev-only-do-not-override-mzwlov).ant-pagination .ant-pagination-item-active a {
+    color: white !important;
+}
+
+:where(.css-dev-only-do-not-override-mzwlov).ant-pagination .ant-pagination-item {
+    border-radius: 100%;
+    border: none;
+    color: white !important;
+}
+
+.list:nth-child(3),
+.list:nth-child(6){
+    width: fit-content;
+    margin-left: 25px;
+}
+
+.list:nth-child(2),
+.list:nth-child(5){
+    width: 130px;
+    margin-left: 5px;
+}
+
+.list:nth-child(1),
+.list:nth-child(4){
+    width: 125px;
+}

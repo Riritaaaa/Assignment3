@@ -20,6 +20,10 @@ import Navmenu from "@routes/navroute";
 import Pokemon from "@pokemon/Homepokemon";
 import Cardpokemon from "@pokemon/cardpokemon";
 import Infoleft from "@pokemon/Infoleft";
+import Evolution from "@pokemon/evolution";
+import Home from "@workshoppokemon/Home";
+import Detail from "@workshoppokemon/Detail";
+
 
 const route = createBrowserRouter([
   {
@@ -90,7 +94,26 @@ const route = createBrowserRouter([
     path: "/infopokemon",
     element: <Infoleft />,
   },
-
+  {
+    path: "/evolution",
+    element: <Evolution />,
+  },
+  {
+    path: "/pokemon/pokemon-list",
+    element: <Home />,
+  },
+  {
+    path: "/pokemon/pokemon-list/*",
+    // element: <div>Not Found</div>,
+    loader: () => {
+      window.location.href = "/pokemon/pokemon-list";
+      return 0;
+    },
+  },
+  {
+    path: "/pokemon/detail/:name_pokemon",
+    element: <Detail />,
+  },
   {
     path: "/home",
     element: <LayoutHome />,

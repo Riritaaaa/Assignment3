@@ -1,5 +1,5 @@
 import { decrement, increment } from "@store/slice/counterSlice";
-import { RootState } from "@store/store";
+import{ RootState } from "../store/store";
 import { useDispatch, useSelector } from "react-redux";
 
 function CounterPage() {

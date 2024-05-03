@@ -5,15 +5,27 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 /* import { Button, ConfigProvider, Space } from "antd";
 import { config_theme } from "./antframework/ConfigTheme.tsx"; */
-import store from "./store/store.tsx";
+import { store } from "./store/store.tsx";
 import { Provider } from "react-redux";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root")!;
+const root = ReactDOM.createRoot(rootElement);
+
+/* ReactDOM.createRoot(document.getElementById("root")!).render */ 
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       {/* <BrowserRouter> */}
-        <App />
+      <App />
       {/* </BrowserRouter> */}
     </Provider>
   </React.StrictMode>
 );
+
+/* root.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>
+) */

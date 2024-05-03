@@ -99,9 +99,9 @@ ul.home {
   border-radius: 10px;
 }
 
-li a:hover{
+/* li a:hover{
   border: 3px solid white;
-}
+} */
 
 .lo a:hover{
   border: 3px solid #7b8c86;

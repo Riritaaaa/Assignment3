@@ -23,7 +23,7 @@ const Infoleft = () => {
                 Charmeleon
               </p>
               <p className="px-4 bg-slate-400 text-center rounded w-fit">
-               leon
+                leon
               </p>
               <p className="px-4 bg-slate-400 text-center rounded w-fit">
                 Char

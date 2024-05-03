@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.containerpo{
+    font-family: "Nunito", sans-serif;
+}
+
+.typecir:nth-child(2){
+    margin-top: 6px;
+}
+
+.buttontype{
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 4px 35px;
+}
+
+.clickcard:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.clickcard:active{
+    transform: scale(0.95);
+    transition: 0.5s;
+
+}

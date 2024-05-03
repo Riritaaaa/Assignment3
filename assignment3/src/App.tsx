@@ -1,15 +1,28 @@
 import { Route, Routes } from "react-router-dom";
 import Workshopapi from "@apicourse/workshopapi";
-import Router from "@routes/route"
+import Router from "@routes/route";
 import { RouterProvider } from "react-router-dom";
+// import { Pokemonservice } from "./service/pokemonservice";
 
 function App() {
-  
+  /*  const getDataPokemon = useGetListPokemonsQuery({
+    limit: 10,
+    offset: 0,
+  });
+
+  console.log(getDataPokemon.data?.results) */
+
   return (
     <>
-    <RouterProvider router={Router}/>
+      <RouterProvider router={Router} />
+    </>
+  );
+}
 
-     {/*  <Routes>
+export default App;
+
+{
+  /*  <Routes>
         <Route path="/" element={<MainPage/>} />
         <Route path="*" element={<NotFound />} />
         <Route path="/home" element={<LayoutHome/>} >
@@ -18,9 +31,11 @@ function App() {
           <Route path="allnew/:typeName" element={<AllNew/>} />
           <Route path="detail/:typeName/:id" element={<DetailNew/>} />
         </Route>
-      </Routes> */}
+      </Routes> */
+}
 
-    {/*   <div className="custom-layout">
+{
+  /*   <div className="custom-layout">
         <div className="main-layout">
           <h1>Vite + React + Redux</h1>
           <div className="card">
@@ -30,10 +45,5 @@ function App() {
             Click on the Vite and React logos to learn more
           </p>
         </div>
-      </div> */}
-
-    </>
-  );
+      </div> */
 }
-
-export default App;

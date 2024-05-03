@@ -1,6 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Cardpokemon from "./cardpokemon";
+import "./pokemon.css";
+import Container from "@components/Container";
+import logopokemon from "@assets/d97gfvk-c4e26092-00c2-4835-8b04-97d417e05efd.png";
+import { Divider, Input } from "antd";
+import { Select } from "antd";
+import { FloatButton } from "antd";
 
 type Pokemon = {
   no: string;
@@ -16,24 +23,21 @@ type Pokemon = {
 };
 
 export const ColorPokemon = {
-  Bug: ["#729F3F"],
-  Dargon: ["rgb(241,110,87)", "rgb(83,164,207)"],
-  Fairy: ["#FDB9E9"],
-  Fire: ["rgb(253,125,36)"],
-  Ghost: ["rgb(123,98,163)"],
-  Ground: ["rgb(247,222,63)", "rgb(171,152,66)"],
-  Normal: ["rgb(164,172,175)"],
-  Psychic: ["rgb(243,102,185)"],
-  Steel: ["rgb(158,183,184)"],
-  Dark: ["rgb(112,112,112)"],
-  Electric: ["rgb(238,213,53)"],
-  Fighting: ["rgb(213,103,35)"],
-  Flying: ["rgb(61,199,239)", "rgb(189,185,184)"],
-  Grass: ["rgb(155,204,80)"],
-  Ice: ["rgb(81,196,231)"],
-  Poison: ["rgb(185,127,201)"],
-  Rock: ["rgb(163,140,33)"],
-  Water: ["rgb(69,146,196)"],
+  bug: "#729F3F",
+  dragon: "rgb(241,110,87)",
+  fire: "rgb(253,125,36)",
+  ghost: "rgb(123,98,163)",
+  ground: "rgb(171,152,66)",
+  normal: "rgb(164,172,175)",
+  psychic: "rgb(243,102,185)",
+  electric: "rgb(238,213,53)",
+  fighting: "rgb(213,103,35)",
+  flying: "rgb(157, 225, 244)",
+  grass: "rgb(155,204,80)",
+  ice: "rgb(81,196,231)",
+  poison: "rgb(185,127,201)",
+  rock: "rgb(123, 103, 14)",
+  water: "rgb(69,146,196)",
 };
 
 export type TypePokemon = keyof typeof ColorPokemon;
@@ -47,89 +51,190 @@ export type StatPokemon = {
   total: number;
 };
 
+const { Search } = Input;
+
 const Homepokemon = () => {
   const [data, setData] = useState<Pokemon[]>();
+  const [isLoading, setIsloading] = useState(false);
+  const [type, setType] = useState<TypePokemon | "">("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedSort, setSelectedSort] = useState<string>("Lowest");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
 
-  const fetchData = () => {
-    axios
-      .get("https://pokemon-api.cyclic.app/api/v1/pokemon")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error("There was a problem with the fetch operation", error);
-      });
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  const fetchData = async (sort: string) => {
+    setIsloading(true);
+    let url = "https://pokemon-api.cyclic.app/api/v1/pokemon";
+
+    let params = new URLSearchParams({
+      type,
+    });
+
+    try {
+      if (type) {
+        url = url + "?" + params.toString();
+      }
+      const response = await axios.get(url);
+
+      let sortedData: Pokemon[] = response.data.data.data;
+
+      if (sort === "Highest") {
+        sortedData.sort((a, b) => parseInt(b.no) - parseInt(a.no));
+      } else if (sort === "Lowest") {
+        sortedData.sort((a, b) => parseInt(a.no) - parseInt(b.no));
+      } else if (sort === "A-Z") {
+        sortedData.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (sort === "Z-A") {
+        sortedData.sort((a, b) => b.name.localeCompare(a.name));
+      }
+
+      setData(response.data.data.data);
+      console.log(response);
+    } catch (error) {
+      console.error("There was a problem with the fetch operation", error);
+    }
+    setIsloading(false);
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData(selectedSort);
+  }, [type, selectedSort]);
+
+  const handleSearch = (value: string) => {
+    setSearchTerm(value);
+  };
+  const handleChange = (value: string) => {
+    setSelectedSort(value);
+  };
 
   return (
     <>
-      <div>
-        {data ? (
-          <div className="text-center">
-            <p>
-              {data.map((item, index) => {
-                return (
-                  <div className="mb-3">
-                    ชื่อ : {item.name} <br></br>
-                  </div>
-                );
-              })}
-            </p>
+      <Container className="containerpo">
+        <img src={logopokemon} className="w-[500px] m-auto mb-6" />
+
+        <div className="w-fit h-fit bg-white m-auto p-5 rounded-lg mb-8">
+          <div className="flex flex-row justify-between">
+            <Search
+              placeholder="Search..."
+              allowClear  
+              onSearch={handleSearch}
+              onChange={(e)=>{
+                setSearchTerm(e.target.value)
+              }}
+              style={{ width: 230 }}
+              className="rounded-full"
+            />
+            <Select
+              defaultValue={selectedSort}
+              style={{ width: 180 }}
+              onChange={handleChange}
+              options={[
+                {
+                  value: "Lowest",
+                  label: "Lowest Number (First)",
+                },
+                {
+                  value: "Highest",
+                  label: "Highest Number (First)",
+                },
+                {
+                  value: "A-Z",
+                  label: "A-Z",
+                },
+                {
+                  value: "Z-A",
+                  label: "Z-A",
+                },
+              ]}
+            />
           </div>
-        ) : (
-          <div>ไม่มีข้อมูล</div>
-        )}
-      </div>
+
+          <Divider />
+          <div className="grid grid-cols-4 gap-2 uppercase font-semibold">
+            {Object.keys(ColorPokemon).map((item) => {
+              return (
+                <div
+                  className="buttontype"
+                  onClick={() => {
+                    if (item === type) {
+                      setType("");
+                    } else {
+                      setType(item as TypePokemon);
+                    }
+                  }}
+                  style={{
+                    backgroundColor:
+                      type === item
+                        ? ColorPokemon[item as TypePokemon]
+                        : "white",
+                  }}
+                >
+                  {item}
+                </div>
+              );
+            })}
+            <div className="buttontype" onClick={() => setType("")}>
+              clear
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          {isLoading ? (
+            <div className="grid gap-12 grid-cols-5 select-none">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <div key={index}>
+                  <Cardpokemon isLoading={true} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div>
+              {data ? (
+                <>
+                  <div className="grid gap-12 grid-cols-5 gap-y-8">
+                    {data
+                      .filter((item) =>
+                        item.name
+                          .toLowerCase()
+                          .includes(searchTerm.toLowerCase())
+                      )
+                      .map((item, index) => {
+                        return (
+                          <div className="clickcard cursor-pointer">
+                            <Cardpokemon
+                              name={item.name}
+                              key={index}
+                              isLoading={false}
+                              id={item.no}
+                              stats={item.stats}
+                              type={item.type.map(
+                                (type) => type as TypePokemon
+                              )}
+                              index={index}
+                            />
+                          </div>
+                        );
+                      })}
+                  </div>
+                </>
+              ) : (
+                <div>ไม่มีข้อมูล</div>
+              )}
+            </div>
+          )}
+        </div>
+        <FloatButton.BackTop />
+      </Container>
     </>
   );
 };
 
 export default Homepokemon;
-
-{
-  /* <div className="mx-12">
-<div className="grid gap-4 grid-cols-5">
-  <p className="bg-red-400">1</p>
-  <p className="bg-red-400">2</p>
-  <p className="bg-red-400">3</p>
-  <p className="bg-red-400">4</p>
-  <p className="bg-red-400">5</p>
-</div>
-</div> */
-}
-
-{
-  /* <div>
-      
-        <Cardpokemon
-          name="balbasaur"
-          isLoading={false}
-          id={"001"}
-          stats={{
-            attack: 400,
-            defense: 500,
-            hp: 20,
-            special: 10,
-            speed: 100,
-            total: 100,
-          }}
-          type={["Fire", "Bug"]}
-        />
-
-        {data.length > 0 ? (
-          <div className="text-center">
-            {data.map((data, index) => (
-              <div key={index} className="mb-3">
-                <p>ชื่อ : {data.name}</p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div>ไม่มีข้อมูล</div>
-        )}
-      </div> */
-}

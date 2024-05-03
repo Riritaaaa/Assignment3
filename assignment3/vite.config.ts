@@ -18,6 +18,8 @@ export default defineConfig({
       "@apicourse": path.resolve(__dirname, "src/apicourse"),
       "@routes": path.resolve(__dirname, "src/routes"),
       "@pokemon": path.resolve(__dirname, "src/pokemon"),
+      "@service": path.resolve(__dirname, "src/service"),
+      "@workshoppokemon": path.resolve(__dirname, "src/workshoppokemon"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },
