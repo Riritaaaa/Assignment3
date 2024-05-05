@@ -40,7 +40,7 @@ const Home = () => {
           <div className="flex justify-center my-10">
             <div className="grid gap-6 grid-cols-5">
               {data?.results?.map((item) => {
-                return <CardPokemon name={item.name} />;
+                return <CardPokemon name={item.name} />
               })}
             </div>
           </div>

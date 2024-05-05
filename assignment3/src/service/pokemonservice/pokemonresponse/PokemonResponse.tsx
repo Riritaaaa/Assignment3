@@ -21,30 +21,7 @@ interface AbilityInfo {
   slot: number;
 }
 
-export interface RawPokemonDetail {
-  abilities: AbilityInfo[];
-  base_experience: number;
-  sprites: {
-    back_default: string;
-    back_shiny: string;
-    front_default: string;
-    front_shiny: string;
-    other: {
-      dream_world: {
-        front_default: string;
-        front_female: string;
-      };
-      "official-artwork": {
-        front_default: string;
-        front_shiny: string;
-      };
-    };
-  };
-  stats: stats[];
-  id: number;
-  types: types[];
-  
-}
+
 
 interface types {
   slot: number;
@@ -82,4 +59,27 @@ export interface PokemonDetail {
   types: {
     name: string;
   }[];
+}
+export interface RawPokemonDetail {
+  abilities: AbilityInfo[];
+  base_experience: number;
+  sprites: {
+    back_default: string;
+    back_shiny: string;
+    front_default: string;
+    front_shiny: string;
+    other: {
+      dream_world: {
+        front_default: string;
+        front_female: string;
+      };
+      "official-artwork": {
+        front_default: string;
+        front_shiny: string;
+      };
+    };
+  };
+  stats: stats[];
+  id: number;
+  types: types[];
 }

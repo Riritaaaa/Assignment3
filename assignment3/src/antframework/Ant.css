@@ -2,19 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.buttonant{
-    border: none;
+.buttonant {
+  border: none;
 }
 
-.buttonant:hover{
-    opacity: 0.7;
-    box-shadow: 3px 3px 3px rgb(220, 220, 220);
-    color: white;
+.buttonant:hover {
+  opacity: 0.7;
+  box-shadow: 3px 3px 3px rgb(220, 220, 220);
+  color: white;
 }
 
-.buttonant:where(.css-dev-only-do-not-override-mzwlov).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover,
-.buttonant:where(.css-dev-only-do-not-override-mzwlov).ant-btn-default:not(:disabled):not(.ant-btn-disabled):active{
-    color: white;
-    opacity: 0.7;
-    box-shadow: 3px 3px 3px rgb(220, 220, 220);
+.buttonant:where(.css-dev-only-do-not-override-mzwlov).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover,
+.buttonant:where(.css-dev-only-do-not-override-mzwlov).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):active {
+  color: white;
+  opacity: 0.7;
+  box-shadow: 3px 3px 3px rgb(220, 220, 220);
 }
+

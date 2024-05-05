@@ -6,7 +6,7 @@ interface props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
 
 const Container:React.FC<props> = ({children,className, ...props }) => {
     return (
-        <div className={`${className ? className :''} bg-gray-300 py-5 min-h-screen select-none` } {...props} >
+        <div className={`${className ? className :''} bg-gray-300 min-h-screen select-none` } {...props} >
             {children}
         </div>
     );

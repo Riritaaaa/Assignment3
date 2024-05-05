@@ -6,7 +6,6 @@ import {
   RawPokemonDetail,
 } from "./pokemonresponse/PokemonResponse";
 import { PokemonRequest } from "./pokemonrequest/PokemonRequest";
-import { types } from "util";
 
 const Pokemonservice = createApi({
   reducerPath: "Pokemonservice",

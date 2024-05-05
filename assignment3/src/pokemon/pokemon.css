@@ -18,11 +18,28 @@
 
 .clickcard:hover{
     transform: scale(1.1);
-    transition: 0.4s;
+    transition: 0.07s;
 }
 
 .clickcard:active{
     transform: scale(0.95);
-    transition: 0.5s;
-
+    transition: 0.07s;
 }
+
+.cardskew:hover,.cardskew2:hover{
+   transform: none;
+   transition: 0.3s;
+}
+
+.cardskew{
+    transform: rotateY(-30deg) scale(1);  
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+ 
+ .cardskew2{
+    transform: rotateY(30deg) scale(1);  
+     transform-style: preserve-3d;
+     transition: 0.3s;
+ }
+ 

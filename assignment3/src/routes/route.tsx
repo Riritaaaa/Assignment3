@@ -18,12 +18,10 @@ import Fetchapi from "@apicourse/fetchapi";
 import Workshopapi from "@apicourse/workshopapi";
 import Navmenu from "@routes/navroute";
 import Pokemon from "@pokemon/Homepokemon";
-import Cardpokemon from "@pokemon/cardpokemon";
-import Infoleft from "@pokemon/Infoleft";
+import Detailpokemon from "@pokemon/Detailpokemon";
 import Evolution from "@pokemon/evolution";
 import Home from "@workshoppokemon/Home";
 import Detail from "@workshoppokemon/Detail";
-
 
 const route = createBrowserRouter([
   {
@@ -82,22 +80,14 @@ const route = createBrowserRouter([
     path: "/workshopapi",
     element: <Workshopapi />,
   },
-  {
+   {
     path: "/pokemon",
     element: <Pokemon />,
-  },
+  }, 
   {
-    path: "/cardpokemon",
-    element: <Cardpokemon />,
-  },
-  {
-    path: "/infopokemon",
-    element: <Infoleft />,
-  },
-  {
-    path: "/evolution",
-    element: <Evolution />,
-  },
+    path: "/pokemon/:no",
+    element: <Detailpokemon />,
+  }, 
   {
     path: "/pokemon/pokemon-list",
     element: <Home />,
