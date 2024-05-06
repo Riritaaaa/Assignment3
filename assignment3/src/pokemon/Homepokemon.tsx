@@ -12,6 +12,7 @@ import {
   TypePokemon,
 } from "@service/pokemonservicecyclic/pokemoncyclicresponse/PokemonCyclicResponse";
 import Cardpokemon from "./cardpokemon";
+import { Link, useSearchParams } from "react-router-dom";
 
 const { Search } = Input;
 
@@ -28,6 +29,7 @@ const Homepokemon = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     if (isInView) {
@@ -41,6 +43,7 @@ const Homepokemon = () => {
   const handleChange = (value: SortType) => {
     setSelectedSort(value);
   };
+
 
   return (
     <>
@@ -88,9 +91,10 @@ const Homepokemon = () => {
           <div className="grid grid-cols-5 gap-3 gap-y-4 uppercase font-semibold">
             {Object.keys(ColorPokemon).map((item, index) => {
               return (
-                <div
+                <Link
                   key={index}
                   className="buttontype"
+                  to={item === type ? "/pokemon" : `/pokemon?type=${item}`}
                   onClick={() => {
                     if (item === type) {
                       setType("");
@@ -108,7 +112,7 @@ const Homepokemon = () => {
                   }}
                 >
                   {item}
-                </div>
+                </Link>
               );
             })}
           </div>

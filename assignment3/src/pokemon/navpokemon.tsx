@@ -20,18 +20,18 @@ const navpokemon: React.FC<props> = ({ type }) => {
       {type?.slice(0, 1).map((item) => (
         <>
           <div
-            className="flex flex-row py-3 px-4 mb-5 pt-5"
+            className="flex flex-row py-[17px] px-5 mb-5 pb-[16px]"
             style={{
               backgroundColor: ColorPokemon[item],
             }}
           >
             <FontAwesomeIcon
               onClick={() => navigate("/pokemon")}
-              className="bg-white rounded-full p-[10px] mr-3 cursor-pointer self-center w-[16px] h-[16px]"
+              className="bg-white rounded-full p-[10px] mr-3 cursor-pointer self-center w-[18px] h-[18px]"
               icon={faAngleLeft}
             />
             <img
-              className="w-[200px] self-center rounded-lg px-3"
+              className="w-[210px] self-center rounded-lg px-3"
               style={{ backgroundColor: "#79797990" }}
               src={logopokemon}
             />

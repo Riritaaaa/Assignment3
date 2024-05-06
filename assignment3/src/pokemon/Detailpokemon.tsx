@@ -47,7 +47,7 @@ const Detailpokemon = () => {
         ) : (
           <>
             {data ? (
-              <div className="mt-[-10px]">
+              <div>
                 <Navpokemon
                   type={data.type.map((type) => type as TypePokemon)}
                 />
