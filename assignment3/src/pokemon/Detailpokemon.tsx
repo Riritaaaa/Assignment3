@@ -24,7 +24,7 @@ const Detailpokemon = () => {
 
   return (
     <>
-      <Container className="containerpokemon flex flex-col justify-center">
+      <Container className="containerpokemon flex flex-col">
         {isLoading ? (
           <div>
             <div className="flex flex-row absolute top-4 left-5">

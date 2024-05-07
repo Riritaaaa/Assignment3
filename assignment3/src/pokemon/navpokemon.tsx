@@ -20,7 +20,7 @@ const navpokemon: React.FC<props> = ({ type }) => {
       {type?.slice(0, 1).map((item) => (
         <>
           <div
-            className="flex flex-row py-[17px] px-5 mb-5 pb-[16px]"
+            className="flex flex-row py-[15px] px-5 mb-5 "
             style={{
               backgroundColor: ColorPokemon[item],
             }}

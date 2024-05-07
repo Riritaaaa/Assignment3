@@ -47,8 +47,9 @@ const Evolution: React.FC<props> = ({ species, type, no, evolution = [] }) => {
   return (
     <>
       {type?.slice(0, 1).map((item) => (
-        <div className="my-10">
-          <p
+        <div className="my-8">
+          {evolData.length > 0 && (
+            <p
             id="test"
             className="text-white m-auto my-5 text-xl font-semibold w-fit py-1 px-3 rounded-md mb-10"
             style={{
@@ -58,6 +59,8 @@ const Evolution: React.FC<props> = ({ species, type, no, evolution = [] }) => {
           >
             EVOLUTION CHAIN
           </p>
+          )}
+          
           <div className="flex flex-row mb-8 justify-evenly px-8">
             {evolData.map((evol, indexEvol) => {
               if (!isLoading) {
