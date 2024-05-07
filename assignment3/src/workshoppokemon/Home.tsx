@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <Container className="containerpokemon">
-      <img className="w-[340px] m-auto pt-2" src={logo} />
+      <img className="w-[340px] m-auto pt-5" src={logo} />
       <p className="text-center text-[#3A5DA8] font-extrabold text-3xl">Dex</p>
       {isLoading ? (
         <div className="flex flex-row justify-center mt-[160px]">

@@ -16,20 +16,27 @@ type props = {
   type: TypePokemon[];
 };
 
-const Infoleft: React.FC<props> = ({
-  species,
-  moves = [],
-  name,
-  type,
-  no,
-}) => {
+const Infoleft: React.FC<props> = ({ species, moves = [], name, type, no }) => {
   return (
-    <div style={{ perspective: 500 }} className="mt-14">
-      <div className="cardskew2 flex flex-col bg-[#f0f0f0] m-10 w-[320px] rounded-md p-3 cursor-pointer">
+
+    <div className="dcard">
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+    <div className="trigger"></div>
+   
+    <div className="paracard">
+
+      <div className=" cardskew2 flex flex-col bg-[#f0f0f0] m-10 w-[320px] rounded-md p-3">
         <p className="font-extrabold text-2xl text-center mb-3">INFO.</p>
         {type?.slice(0, 1).map((item) => (
           <div className="flex flex-row">
-            <div className="text-right mr-4 ml-2 font-bold leading-8">
+            <div className=" text-right mr-4 ml-2 font-bold leading-8">
               <p>No</p>
               <p>Name</p>
               <p>Species</p>
@@ -62,7 +69,8 @@ const Infoleft: React.FC<props> = ({
               </div>
               <div className="flex flex-row flex-wrap mb-1">
                 {moves?.slice(0, 5).map((item) => {
-                  const color = ColorPokemon[item.type as unknown as TypePokemon]
+                  const color =
+                    ColorPokemon[item.type as unknown as TypePokemon];
                   return (
                     <div
                       className="rounded flex py-1 px-[10px] mr-2 mb-2"
@@ -84,6 +92,7 @@ const Infoleft: React.FC<props> = ({
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -31,7 +31,8 @@ const navpokemon: React.FC<props> = ({ type }) => {
               icon={faAngleLeft}
             />
             <img
-              className="w-[210px] self-center rounded-lg px-3"
+              onClick={() => navigate("/pokemon")}
+              className="w-[210px] self-center rounded-lg px-3  cursor-pointer"
               style={{ backgroundColor: "#79797990" }}
               src={logopokemon}
             />

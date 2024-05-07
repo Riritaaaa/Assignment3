@@ -27,7 +27,7 @@ const Detailpokemon = () => {
       <Container className="containerpokemon flex flex-col justify-center">
         {isLoading ? (
           <div>
-            <div className="flex flex-row absolute top-2 left-4">
+            <div className="flex flex-row absolute top-4 left-5">
               <FontAwesomeIcon
                 onClick={() => navigate("/pokemon")}
                 className="bg-white rounded-full p-[10px] mr-3 cursor-pointer self-center w-[16px] h-[16px]"
@@ -52,7 +52,7 @@ const Detailpokemon = () => {
                   type={data.type.map((type) => type as TypePokemon)}
                 />
                 <div className="flex flex-row justify-between items-start">
- 
+
                   <div className="w-20 self-center ml-9">
                     {no && parseInt(no, 10) > 1 && (
                       <FontAwesomeIcon
@@ -116,7 +116,7 @@ const Detailpokemon = () => {
               </div>
             ) : (
               <div>
-                <div className="flex flex-row absolute top-2 left-4">
+                <div className="flex flex-row absolute top-4 left-5">
                   <FontAwesomeIcon
                     onClick={() => navigate("/pokemon")}
                     className="bg-white rounded-full p-[10px] mr-3 cursor-pointer self-center w-[16px] h-[16px]"

@@ -47,7 +47,7 @@ const Evolution: React.FC<props> = ({ species, type, no, evolution = [] }) => {
   return (
     <>
       {type?.slice(0, 1).map((item) => (
-        <div>
+        <div className="my-10">
           <p
             id="test"
             className="text-white m-auto my-5 text-xl font-semibold w-fit py-1 px-3 rounded-md mb-10"

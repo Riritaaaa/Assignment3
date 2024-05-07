@@ -21,15 +21,16 @@ export type SortType = "Lowest" | "Highest" | "A-Z" | "Z-A";
 const Homepokemon = () => {
   const [type, setType] = useState<TypePokemon | "">("");
   const [selectedSort, setSelectedSort] = useState<SortType>("Lowest");
-  const { data, isLoading } = useGetListPokemonCyclicQuery({
-    type: type,
+  const [searchParams] = useSearchParams();
+  const typeParam = searchParams.get("type");
+  const { data, isLoading , isFetching} = useGetListPokemonCyclicQuery({
+    type: /*type*/ typeParam as TypePokemon || '',
     sort: selectedSort,
   });
   const [searchTerm, setSearchTerm] = useState<string>("");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
-  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     if (isInView) {
@@ -88,15 +89,15 @@ const Homepokemon = () => {
           </div>
 
           <Divider className="bg-[#e7e7e7]" />
-          <div className="grid grid-cols-5 gap-3 gap-y-4 uppercase font-semibold">
+          <div className="grid grid-cols-5 gap-5 gap-y-4 uppercase font-semibold">
             {Object.keys(ColorPokemon).map((item, index) => {
               return (
                 <Link
                   key={index}
                   className="buttontype"
-                  to={item === type ? "/pokemon" : `/pokemon?type=${item}`}
+                  to={item === typeParam ? "/pokemon" : `/pokemon?type=${item}`}
                   onClick={() => {
-                    if (item === type) {
+                    if (item === typeParam) {
                       setType("");
                     } else {
                       setType(item as TypePokemon);
@@ -104,10 +105,10 @@ const Homepokemon = () => {
                   }}
                   style={{
                     backgroundColor:
-                      type === item
+                    typeParam === item
                         ? ColorPokemon[item as TypePokemon]
                         : "white",
-                    color: type === item ? "white" : "black",
+                    color: typeParam === item ? "white" : "black",
                     transition: "0.3s",
                   }}
                 >
@@ -119,7 +120,7 @@ const Homepokemon = () => {
         </div>
 
         <div className="flex justify-center">
-          {isLoading ? (
+          {isFetching ? (
             <div className="grid gap-12 grid-cols-5 select-none">
               {Array.from({ length: 5 }).map((_, index) => (
                 <div key={index}>
