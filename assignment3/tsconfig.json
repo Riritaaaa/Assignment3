@@ -37,6 +37,7 @@
         "@pokemon/*": ["pokemon/*"],
         "@service/*": ["service/*"],
         "@workshoppokemon/*": ["workshoppokemon/*"],
+        "@quiz/*": ["quiz/*"],
       },
   },
   "include": ["src"],

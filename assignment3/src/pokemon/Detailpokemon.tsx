@@ -27,19 +27,19 @@ const Detailpokemon = () => {
       <Container className="containerpokemon flex flex-col">
         {isLoading ? (
           <div>
-            <div className="flex flex-row absolute top-4 left-5">
+            <div className="flex flex-row absolute top-4 left-5 ">
               <FontAwesomeIcon
                 onClick={() => navigate("/pokemon")}
-                className="bg-white rounded-full p-[10px] mr-3 cursor-pointer self-center w-[16px] h-[16px]"
+                className="bg-white rounded-full p-[10px] mr-3 cursor-pointer  w-[16px] h-[16px]"
                 icon={faAngleLeft}
               />
               <img
-                className="w-[200px] self-center rounded-lg px-3"
+                className="w-[200px] self-center rounded-lg px-3 "
                 style={{ backgroundColor: "#79797990" }}
                 src={logopokemon}
               />
             </div>
-            <div className="text-center">
+            <div className="text-center mt-[150px]">
               <img className="w-[26%] m-auto" src={pikachu} />
               <p className="mt-4 text-lg font-medium">Loading...</p>
             </div>
@@ -52,7 +52,6 @@ const Detailpokemon = () => {
                   type={data.type.map((type) => type as TypePokemon)}
                 />
                 <div className="flex flex-row justify-between items-start">
-
                   <div className="w-20 self-center ml-9">
                     {no && parseInt(no, 10) > 1 && (
                       <FontAwesomeIcon
@@ -90,7 +89,7 @@ const Detailpokemon = () => {
                     />
                   </div>
                   <div className="w-20 self-center mr-9">
-                  {no && parseInt(no, 10) < 151 && (
+                    {no && parseInt(no, 10) < 151 && (
                       <FontAwesomeIcon
                         className="bg-white rounded-full p-[10px] cursor-pointer self-center w-[16px] h-[16px] ml-11"
                         onClick={() =>
@@ -128,7 +127,7 @@ const Detailpokemon = () => {
                     src={logopokemon}
                   />
                 </div>
-                <div className="text-center bg-[#B7B9BC] w-[700px] m-auto py-6 rounded">
+                <div className="text-center bg-[#B7B9BC] w-[700px] m-auto py-6 rounded  mt-[230px]">
                   <img className="w-[180px] m-auto" src={pikachu2} />
                   <p className="mt-4 text-lg font-medium">Not Found Pokemon!</p>
                 </div>
@@ -142,4 +141,3 @@ const Detailpokemon = () => {
 };
 
 export default Detailpokemon;
-

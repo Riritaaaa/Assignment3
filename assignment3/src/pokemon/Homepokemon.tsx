@@ -23,8 +23,8 @@ const Homepokemon = () => {
   const [selectedSort, setSelectedSort] = useState<SortType>("Lowest");
   const [searchParams] = useSearchParams();
   const typeParam = searchParams.get("type");
-  const { data, isLoading , isFetching} = useGetListPokemonCyclicQuery({
-    type: /*type*/ typeParam as TypePokemon || '',
+  const { data, isLoading, isFetching } = useGetListPokemonCyclicQuery({
+    type: (typeParam as TypePokemon) || "",
     sort: selectedSort,
   });
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -44,7 +44,6 @@ const Homepokemon = () => {
   const handleChange = (value: SortType) => {
     setSelectedSort(value);
   };
-
 
   return (
     <>
@@ -105,7 +104,7 @@ const Homepokemon = () => {
                   }}
                   style={{
                     backgroundColor:
-                    typeParam === item
+                      typeParam === item
                         ? ColorPokemon[item as TypePokemon]
                         : "white",
                     color: typeParam === item ? "white" : "black",
@@ -171,4 +170,3 @@ const Homepokemon = () => {
 };
 
 export default Homepokemon;
-

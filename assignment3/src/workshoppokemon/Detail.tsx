@@ -9,7 +9,25 @@ import logo from "@assets/Pokemon-Logo.png";
 const Detail = () => {
   const navigate = useNavigate();
   const { name_pokemon } = useParams();
-  const { data, isLoading } = useGetPokemonByIDQuery(name_pokemon || "");
+  const { data, isLoading,isError } = useGetPokemonByIDQuery(name_pokemon || "");
+  if(isError){
+    return (
+      <div>
+      <img className="w-[340px] m-auto" src={logo} />
+      <div className="mt-8 mb-3">
+        <p className="text-[#3a5da8] font-extrabold text-[80px]">
+          NOT FOUND ERROR
+        </p>
+      </div>
+      <div
+        onClick={() => navigate("/pokemon/pokemon-list")}
+        className="font-bold text-xl text-[#3a5da8] border-solid border-b-2 border-[#3a5da8] text-center m-auto w-fit cursor-pointer"
+      >
+        back to home
+      </div>
+    </div>
+    )
+  }
   return (
     <Container className="containerpokemon flex justify-center items-center">
       {isLoading ? (

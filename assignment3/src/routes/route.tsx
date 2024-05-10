@@ -19,9 +19,13 @@ import Workshopapi from "@apicourse/workshopapi";
 import Navmenu from "@routes/navroute";
 import Pokemon from "@pokemon/Homepokemon";
 import Detailpokemon from "@pokemon/Detailpokemon";
-import Evolution from "@pokemon/evolution";
 import Home from "@workshoppokemon/Home";
 import Detail from "@workshoppokemon/Detail";
+import Homequiz from "@quiz/Homequiz";
+import Quiz from "@quiz/Quiz";
+import Score from "@quiz/Score";
+import Evaluate from "@quiz/Evaluate";
+import Navbar from "@quiz/nav"
 
 const route = createBrowserRouter([
   {
@@ -80,14 +84,14 @@ const route = createBrowserRouter([
     path: "/workshopapi",
     element: <Workshopapi />,
   },
-   {
+  {
     path: "/pokemon",
     element: <Pokemon />,
-  }, 
+  },
   {
     path: "/pokemon/:no",
     element: <Detailpokemon />,
-  }, 
+  },
   {
     path: "/pokemon/pokemon-list",
     element: <Home />,
@@ -104,6 +108,26 @@ const route = createBrowserRouter([
     path: "/pokemon/detail/:name_pokemon",
     element: <Detail />,
   },
+/*   {
+    path: "/homequiz",
+    element: <Homequiz />,
+  },
+  {
+    path: "/quiz",
+    element: <Quiz />,
+  },
+  {
+    path: "/score",
+    element: <Score />,
+  },
+  {
+    path: "/evaluate",
+    element: <Evaluate />,
+  }, 
+  {
+    path: "/nav",
+    element: <Navtail />,
+  },  */
   {
     path: "/home",
     element: <LayoutHome />,
@@ -126,6 +150,28 @@ const route = createBrowserRouter([
       },
     ],
   },
+    {
+    path: "/homequiz",
+    element: <Navbar />,
+    children: [
+      {
+        index: true,
+        element: <Homequiz />,
+      },
+      {
+        path: "quiz",
+        element: <Quiz />,
+      },
+      {
+        path: "score",
+        element: <Score />,
+      },
+      {
+        path: "evaluate",
+        element: <Evaluate />,
+      },
+    ],
+  },  
 ]);
 
 export default route;

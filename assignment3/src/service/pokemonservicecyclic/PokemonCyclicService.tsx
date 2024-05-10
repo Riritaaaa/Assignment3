@@ -23,7 +23,7 @@ const PokemonCyclicService = createApi({
         }
         return `pokemon`;
       },
-      transformResponse: (response: RawPokemon, meta, arg) => {
+      transformResponse: (response: RawPokemon, _meta, arg) => {
         const _response: useDataPokemon[] = response.data.data.map((item) => ({
           name: item.name,
           no: item.no,

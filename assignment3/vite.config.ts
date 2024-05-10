@@ -20,6 +20,7 @@ export default defineConfig({
       "@pokemon": path.resolve(__dirname, "src/pokemon"),
       "@service": path.resolve(__dirname, "src/service"),
       "@workshoppokemon": path.resolve(__dirname, "src/workshoppokemon"),
+      "@quiz": path.resolve(__dirname, "src/quiz"),
     },
     extensions: ['.ts', '.tsx', '.js']
   },
