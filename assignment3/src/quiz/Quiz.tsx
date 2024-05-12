@@ -83,14 +83,12 @@ const Quiz = () => {
               </div>
             ) : (
               <>
-                {!isSubmit ? (
-                  <p className="text-right">ข้อที่ {currentQuiz + 1} จาก 10</p>
-                ) : (
-                  <></>
-                )}
-                <div className="mt-[40px] flex flex-col">
+                <div className="mt-[10px] flex flex-col">
                   {!isSubmit ? (
                     <>
+                      <p className="text-right mb-[35px]">
+                        ข้อ {currentQuiz + 1} จาก 10
+                      </p>
                       <div className="mb-[30px] h-[200px]">
                         {QuestionsData.slice(currentQuiz, currentQuiz + 1).map(
                           (item, index) => {
@@ -178,7 +176,7 @@ const Quiz = () => {
                       </div>
                     </>
                   ) : (
-                    <div className="flex flex-col m-auto text-lg mt-[100px]">
+                    <div className="flex flex-col m-auto text-lg mt-[110px]">
                       <p className="text-center mb-5 font-medium text-3xl">
                         สรุปผลการทดสอบ
                       </p>

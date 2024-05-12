@@ -6,7 +6,7 @@
 :where(.css-dev-only-do-not-override-mzwlov).ant-menu-dark.ant-menu-horizontal >.ant-menu-submenu-selected, 
 :where(.css-dev-only-do-not-override-mzwlov).ant-menu-dark>.ant-menu.ant-menu-horizontal >.ant-menu-submenu-selected {
     padding:16px;
-    background-color: #6b7abb;
+    background-color: hsl(229, 37%, 58%);
 }
 
 :where(.css-dev-only-do-not-override-mzwlov).ant-menu .ant-menu-title-content {
@@ -19,7 +19,6 @@
 }
 
 .menu{
-    padding-left: 40px;
     background: #424242;
 }
 
@@ -390,7 +389,6 @@ input[type="checkbox"]:active{
 
 .toggle--label:after {
   transition-delay: 0ms;
-  transition: all 250ms ease-in;
   position: absolute;
   content: "";
   box-shadow: var(--gray-dots) -19px 3px 0 -2px, var(--gray-dots) -23px 9px 0 -3px;

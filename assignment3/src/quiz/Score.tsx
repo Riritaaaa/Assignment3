@@ -39,7 +39,9 @@ const Score = () => {
               {sortedScores.map((score, index) => {
                 return (
                   <div className="text-lg leading-10">
+                
                     {index + 1}. {score} คะแนน
+                   
                   </div>
                 );
               })}
