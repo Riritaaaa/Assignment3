@@ -19,11 +19,11 @@ const { Search } = Input;
 export type SortType = "Lowest" | "Highest" | "A-Z" | "Z-A";
 
 const Homepokemon = () => {
-  const [type, setType] = useState<TypePokemon | "">("");
+  const [_type, setType] = useState<TypePokemon | "">("");
   const [selectedSort, setSelectedSort] = useState<SortType>("Lowest");
   const [searchParams] = useSearchParams();
   const typeParam = searchParams.get("type");
-  const { data, isLoading, isFetching } = useGetListPokemonCyclicQuery({
+  const { data, isFetching } = useGetListPokemonCyclicQuery({
     type: (typeParam as TypePokemon) || "",
     sort: selectedSort,
   });

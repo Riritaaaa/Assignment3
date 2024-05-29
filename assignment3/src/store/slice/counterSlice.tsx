@@ -1,4 +1,4 @@
-import React from "react";
+
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 type counterSlice = {

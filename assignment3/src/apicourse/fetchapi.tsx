@@ -1,5 +1,5 @@
-import { error } from "console";
-import React, { useState, useEffect } from "react";
+
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 type pokemon = {

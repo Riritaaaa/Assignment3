@@ -1,8 +1,7 @@
-import { Route, Routes } from "react-router-dom";
-import Workshopapi from "@apicourse/workshopapi";
+
 import Router from "@routes/route";
 import { RouterProvider } from "react-router-dom";
-import { useEffect } from "react";
+
 // import { Pokemonservice } from "./service/pokemonservice";
 
 function App() {

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 /* import { Button, ConfigProvider, Space } from "antd";
 import { config_theme } from "./antframework/ConfigTheme.tsx"; */
 import { store } from "./store/store.tsx";

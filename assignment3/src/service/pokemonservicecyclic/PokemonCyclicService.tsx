@@ -55,7 +55,7 @@ const PokemonCyclicService = createApi({
 
     getPokemonCyclicByID: builder.query<useDataPokemonDetail, string>({
       query: (no) => `pokemon/${no}`,
-      transformResponse: (response2: RawPokemonDetail, meta, arg) => {
+      transformResponse: (response2: RawPokemonDetail, _meta, _arg) => {
         const _response2: useDataPokemonDetail[] = response2.data.data.map(
           (item) => {
             return {

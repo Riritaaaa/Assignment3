@@ -34,7 +34,7 @@ const Infoleft: React.FC<props> = ({ species, moves = [], name, type, no }) => {
 
       <div className=" cardskew2 flex flex-col bg-[#f0f0f0] m-10 w-[320px] rounded-md p-3">
         <p className="font-extrabold text-2xl text-center mb-3">INFO.</p>
-        {type?.slice(0, 1).map((item) => (
+        {type?.slice(0, 1).map(() => (
           <div className="flex flex-row">
             <div className=" text-right mr-4 ml-2 font-bold leading-8">
               <p>No</p>

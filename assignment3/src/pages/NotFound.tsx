@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import imagenot from "@assets/Group1.png";
 import "@pages/App.css"

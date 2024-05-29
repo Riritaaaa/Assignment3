@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import React from "react";
 import {
   PokemonDetail,
   PokemonResponse,

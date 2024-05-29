@@ -20,7 +20,7 @@ type props = {
   type: TypePokemon[];
 };
 
-const Evolution: React.FC<props> = ({ species, type, no, evolution = [] }) => {
+const Evolution: React.FC<props> = ({ type, no, evolution = [] }) => {
   const [getPokemon] = useLazyGetPokemonCyclicByIDQuery();
   const [evolData, setEvolData] = useState<useDataPokemonDetail[]>([]);
   const [isLoading, setisLoading] = useState(true);
