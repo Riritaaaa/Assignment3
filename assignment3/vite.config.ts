@@ -24,7 +24,7 @@ export default defineConfig({
     },
     extensions: ['.ts', '.tsx', '.js']
   },
-
+  base:"/workshop",
   server: {
     open: true,
     port: 3000,

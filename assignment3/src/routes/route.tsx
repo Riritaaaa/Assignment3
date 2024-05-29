@@ -98,7 +98,6 @@ const route = createBrowserRouter([
   },
   {
     path: "/pokemon/pokemon-list/*",
-    // element: <div>Not Found</div>,
     loader: () => {
       window.location.href = "/pokemon/pokemon-list";
       return 0;
@@ -108,26 +107,6 @@ const route = createBrowserRouter([
     path: "/pokemon/detail/:name_pokemon",
     element: <Detail />,
   },
-/*   {
-    path: "/homequiz",
-    element: <Homequiz />,
-  },
-  {
-    path: "/quiz",
-    element: <Quiz />,
-  },
-  {
-    path: "/score",
-    element: <Score />,
-  },
-  {
-    path: "/evaluate",
-    element: <Evaluate />,
-  }, 
-  {
-    path: "/nav",
-    element: <Navtail />,
-  },  */
   {
     path: "/home",
     element: <LayoutHome />,
@@ -172,6 +151,6 @@ const route = createBrowserRouter([
       },
     ],
   },  
-]);
+],{basename:"/workshop"});
 
 export default route;

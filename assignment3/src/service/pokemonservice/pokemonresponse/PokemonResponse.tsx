@@ -21,8 +21,6 @@ interface AbilityInfo {
   slot: number;
 }
 
-
-
 interface types {
   slot: number;
   type: {
